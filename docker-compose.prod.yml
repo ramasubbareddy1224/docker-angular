@@ -1,0 +1,10 @@
+version: '3'
+services:
+    dockerangular-prod-service:
+      build:
+        context: .
+        dockerfile: Dockerfile.nginx
+      environment:
+        NODE_ENV: production
+      ports:
+        - 8080:80
